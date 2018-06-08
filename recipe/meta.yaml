@@ -24,7 +24,6 @@ requirements:
     - python
     - networkx
     - numpy
-    - pyepics
 
 test:
   imports:
