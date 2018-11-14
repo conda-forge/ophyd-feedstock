@@ -1,6 +1,6 @@
 {% set name = "ophyd" %}
 {% set version = "1.3.0" %}
-{% set sha256 = "d6b01979107a6e04410128e8790fa1d2ef72555aad8bb42fa2f073664bd9d1c8" %}
+{% set sha256 = "1d957a27f4725763fadfe10bdc42cd3d1865e719d6d34489bde7363a6011bb62" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k or win]
 
