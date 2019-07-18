@@ -10,13 +10,13 @@ source:
   fn: ophyd-v{{ version }}.tar.gz
   url: https://github.com/NSLS-II/ophyd/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches: 
+    - windows.patch
 
 build:
   number: 2
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k]
-  patches: 
-    - windows.patch
 
 requirements:
   build:
