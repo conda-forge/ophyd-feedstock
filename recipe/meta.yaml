@@ -12,9 +12,10 @@ source:
   sha256: {{ sha256 }}
   patches: 
     - windows.patch
+    - ophyd.patch
 
 build:
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k]
 
