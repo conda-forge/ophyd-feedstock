@@ -12,16 +12,17 @@ source:
   sha256: {{ sha256 }}
   patches: 
     - windows.patch
+    - ophyd.patch
 
 build:
-  number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 3
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [py2k]
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - networkx
