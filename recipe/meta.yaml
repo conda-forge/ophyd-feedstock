@@ -16,13 +16,13 @@ source:
 
 build:
   number: 3
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [py2k]
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - networkx
