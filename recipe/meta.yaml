@@ -1,46 +1,49 @@
 {% set name = "ophyd" %}
 {% set version = "1.3.3" %}
-{% set sha256 = "1526e5e934b4c85a9d51f822e69ac45913f308043221abd0316b922350034cbf" %}
+{% set sha256 = "48a37d1447a9af173c751d251a0867e5b1610f8ae228d48d8c14ae2017d782d7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: ophyd-v{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/ophyd/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches: 
-    - windows.patch
+  patches:
     - ophyd.patch
+    - windows.patch
 
 build:
-  number: 3
+  noarch: python
+  number: 4
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [py2k]
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
     - python
     - networkx
     - numpy
+    - pyepics
 
 test:
   imports:
-    - ophyd
-    - ophyd.utils
-    - ophyd.areadetector
-    - ophyd.sim
+    - {{ name }}
+    - {{ name }}.utils
+    - {{ name }}.areadetector
+    - {{ name }}.sim
 
 about:
-  home: https://github.com/NSLS-II/ophyd
+  home: https://blueskyproject.io
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Ophyd - EPICS Client Abstractions'
+  description: 'Ophyd - EPICS Client Abstractions'
+  doc_url: https://blueskyproject.io/ophyd
+  dev_url: https://github.com/bluesky/ophyd
 
 extra:
   recipe-maintainers:
