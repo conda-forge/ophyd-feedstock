@@ -27,6 +27,7 @@ requirements:
     - networkx
     - numpy
     - pyepics
+    - setuptools
 
 test:
   imports:
