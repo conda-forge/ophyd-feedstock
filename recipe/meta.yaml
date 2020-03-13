@@ -46,8 +46,8 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/event-model
-    - hhslepicka
     - danielballan
-    - mrakitin
+    - hhslepicka
     - klauer
+    - mrakitin
     - tacaswell
