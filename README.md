@@ -122,4 +122,5 @@ Feedstock Maintainers
 * [@klauer](https://github.com/klauer/)
 * [@mrakitin](https://github.com/mrakitin/)
 * [@tacaswell](https://github.com/tacaswell/)
+* [@zllentz](https://github.com/zllentz/)
 
