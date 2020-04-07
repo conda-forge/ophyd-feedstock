@@ -1,6 +1,6 @@
 {% set name = "ophyd" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "b9112c8618941e2c62a89b9de5085d2894dd9ffba80ae58639c1eddd974e2223" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "4b67506d42ba796c56f990ff5588be9a046271aaabadd4b5f35e7078a2ef8efe" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -38,8 +38,8 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Ophyd - EPICS Client Abstractions'
-  description: 'Ophyd - EPICS Client Abstractions'
+  summary: Ophyd - EPICS Client Abstractions
+  description: Ophyd - EPICS Client Abstractions
   doc_url: https://blueskyproject.io/ophyd
   dev_url: https://github.com/bluesky/ophyd
 
