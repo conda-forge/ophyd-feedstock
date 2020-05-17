@@ -5,3 +5,4 @@ travis:
 provider:
   win: azure
 upload_on_branch: master
+conda_forge_output_validation: true
