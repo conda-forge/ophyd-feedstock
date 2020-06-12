@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - networkx
     - numpy
-    - pyepics
+    - pyepics >=3.4.2
     - setuptools
 
 test:
