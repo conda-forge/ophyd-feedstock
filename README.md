@@ -5,9 +5,13 @@ Home: https://blueskyproject.io
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ophyd-feedstock/blob/master/LICENSE.txt)
 
 Summary: Ophyd - EPICS Client Abstractions
+
+Development: https://github.com/bluesky/ophyd
+
+Documentation: https://blueskyproject.io/ophyd
 
 Ophyd - EPICS Client Abstractions
 
