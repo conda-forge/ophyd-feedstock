@@ -42,6 +42,7 @@ Installing `ophyd` from the `conda-forge` channel can be achieved by adding `con
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `ophyd` can be installed with:
@@ -122,7 +123,6 @@ Feedstock Maintainers
 
 * [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 * [@danielballan](https://github.com/danielballan/)
-* [@hhslepicka](https://github.com/hhslepicka/)
 * [@klauer](https://github.com/klauer/)
 * [@mrakitin](https://github.com/mrakitin/)
 * [@tacaswell](https://github.com/tacaswell/)
