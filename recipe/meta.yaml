@@ -1,6 +1,6 @@
 {% set name = "ophyd" %}
-{% set version = "1.6.1" %}
-{% set sha256 = "b9c742489510171ec051aa903dc02d5992726a449bd5c50944434101e70ab497" %}
+{% set version = "1.6.2" %}
+{% set sha256 = "64d9bb1b83dd1e57554d8285b3dce6ca0f495b34193305f80adda16c2a33aa63" %}
 
 package:
   name: {{ name|lower }}
