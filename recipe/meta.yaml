@@ -22,7 +22,6 @@ requirements:
   run:
     - python >=3.6
     - caproto
-    - inflection
     - networkx >=2.5
     - numpy
     - pint
