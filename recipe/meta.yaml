@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - caproto
     - inflection
-    - networkx >=2.0
+    - networkx >=2.5
     - numpy
     - pint
     - pyepics >=3.4.2
