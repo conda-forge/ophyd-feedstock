@@ -21,10 +21,12 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - networkx
+    - caproto
+    - inflection
+    - networkx >=2.0
     - numpy
+    - pint
     - pyepics >=3.4.2
-    - setuptools
 
 test:
   imports:
