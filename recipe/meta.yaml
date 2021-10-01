@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1 
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -26,6 +26,7 @@ requirements:
     - numpy
     - pint
     - pyepics >=3.4.2
+    - inflection
 
 test:
   imports:
