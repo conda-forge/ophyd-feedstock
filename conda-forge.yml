@@ -1,4 +1,7 @@
 provider:
   win: azure
-upload_on_branch: master
+upload_on_branch: main
 conda_forge_output_validation: true
+github:
+  branch_name: main
+  tooling_branch_name: main
