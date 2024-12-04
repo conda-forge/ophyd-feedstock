@@ -27,6 +27,7 @@ requirements:
     - numpy
     - pint
     - pyepics >=3.4.2
+    - opentelemetry-api
 
 test:
   imports:
