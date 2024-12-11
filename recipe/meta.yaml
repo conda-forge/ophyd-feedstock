@@ -1,18 +1,18 @@
 {% set name = "ophyd" %}
-{% set version = "1.9.0" %}
-{% set sha256 = "a7ab41c5be9e131f880b664a50e13bfc432631ab581df4788429ee59e0fe68a6" %}
+{% set version = "1.10.0" %}
+{% set sha256 = "74d8051cc29e843cd6cab684412b62128275fb19be3e7beb2dea94aa96c8629f" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -27,6 +27,7 @@ requirements:
     - numpy
     - pint
     - pyepics >=3.4.2
+    - opentelemetry-api
 
 test:
   imports:
