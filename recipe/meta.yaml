@@ -12,16 +12,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - caproto
     - networkx >=2.5
     - numpy
@@ -30,6 +30,8 @@ requirements:
     - opentelemetry-api
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - {{ name }}
     - {{ name }}.utils
