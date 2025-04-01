@@ -23,7 +23,7 @@ requirements:
     - setuptools_scm
   run:
     - python >={{ python_min }}
-    - caproto
+    - caproto <1.2.0  # Temp fix before we figure out the issue in ophyd.
     - networkx >=2.5
     - numpy
     - opentelemetry-api
