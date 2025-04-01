@@ -1,6 +1,6 @@
 {% set name = "ophyd" %}
-{% set version = "1.10.0" %}
-{% set sha256 = "74d8051cc29e843cd6cab684412b62128275fb19be3e7beb2dea94aa96c8629f" %}
+{% set version = "1.10.5" %}
+{% set sha256 = "668d24af34a0b91bb5c5b076d216111087a86ed262bb6aa2c7af407af0141a75" %}
 
 package:
   name: {{ name|lower }}
@@ -12,23 +12,23 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
     - pip
+    - setuptools
     - setuptools_scm
   run:
     - python >={{ python_min }}
     - caproto
     - networkx >=2.5
     - numpy
+    - opentelemetry-api
     - pint
     - pyepics >=3.4.2
-    - opentelemetry-api
 
 test:
   requires:
