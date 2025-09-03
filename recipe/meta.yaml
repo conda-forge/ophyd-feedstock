@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -30,8 +30,11 @@ requirements:
     - pyepics >=3.4.2
 
 test:
+  commands:
+    - pip check
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - {{ name }}
     - {{ name }}.utils
