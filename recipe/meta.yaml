@@ -26,6 +26,7 @@ requirements:
     - networkx >=2.5
     - numpy
     - opentelemetry-api
+    - packaging
     - pint
     - pyepics >=3.4.2
 
