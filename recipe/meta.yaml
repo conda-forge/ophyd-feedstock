@@ -1,5 +1,5 @@
 {% set name = "ophyd" %}
-{% set version = "1.10.7" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a3637a03a874fd9b4917d5089b738060dea7cd57c4445f21e2275e2b7624b007
+  sha256: 75e0489436035fe7ba40476f2c2ea7fd08ed02d7cd462b722e347684447ec9cc
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - setuptools_scm
   run:
     - python >={{ python_min }}
-    - caproto <1.2.0  # Temp fix before we figure out the issue in ophyd.
+    - caproto !=1.2.0  # known-bad version
     - networkx >=2.5
     - numpy
     - opentelemetry-api
