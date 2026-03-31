@@ -1,5 +1,5 @@
 {% set name = "ophyd" %}
-{% set version = "1.11.0" %}
+{% set version = "1.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 75e0489436035fe7ba40476f2c2ea7fd08ed02d7cd462b722e347684447ec9cc
+  sha256: c813fa90f7d070b8da2a875ace9f50193a29d4c4555838c9c766947d971bbb9c
 
 build:
   noarch: python
